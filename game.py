@@ -79,7 +79,7 @@ while user_command != 'QUIT':
             print("You can't move in that direction as I said before!")
     else:
         print("You entered an invalid format please enter a valid command!")
-        print("You are only allowed to use: 'UP', 'DOWN', 'LEFT', 'RIGHT' and 'QUIT'")
+        print("You are only allowed to use: 'UP', 'DOWN', 'LEFT', 'RIGHT'")
     print(" \nEnter 'QUIT' to exit!")
     user_command = input("Which direction do you want to move? ")
 else:
