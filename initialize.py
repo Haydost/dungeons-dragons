@@ -29,27 +29,35 @@ def initialize_grid(n: int) -> List:
     limitations = []
     if cordinations[player_index][0] == 1:
         limitations.append('UP')
-        if cordinations[player_index][0] == 1 and cordinations[player_index][1] == 1:
+        if cordinations[player_index][0] == 1 and\
+                cordinations[player_index][1] == 1:
             limitations.append('LEFT')
-        elif cordinations[player_index][0] == 1 and cordinations[player_index][1] == n:
+        elif cordinations[player_index][0] == 1 and\
+                cordinations[player_index][1] == n:
             limitations.append('RIGHT')
     elif cordinations[player_index][0] == n:
         limitations.append('DOWN')
-        if cordinations[player_index][0] == n and cordinations[player_index][1] == 1:
+        if cordinations[player_index][0] == n and\
+                cordinations[player_index][1] == 1:
             limitations.append('LEFT')
-        elif cordinations[player_index][0] == n and cordinations[player_index][1] == n:
+        elif cordinations[player_index][0] == n and\
+                cordinations[player_index][1] == n:
             limitations.append('RIGHT')
     elif cordinations[player_index][1] == 1:
         limitations.append('LEFT')
-        if cordinations[player_index][1] == 1 and cordinations[player_index][0] == 1:
+        if cordinations[player_index][1] == 1 and\
+                cordinations[player_index][0] == 1:
             limitations.append('UP')
-        elif cordinations[player_index][1] == 1 and cordinations[player_index][0] == n:
+        elif cordinations[player_index][1] == 1 and\
+                cordinations[player_index][0] == n:
             limitations.append('DOWN')
     elif cordinations[player_index][1] == n:
         limitations.append('RIGHT')
-        if cordinations[player_index][1] == n and cordinations[player_index][0] == 1:
+        if cordinations[player_index][1] == n and\
+                cordinations[player_index][0] == 1:
             limitations.append('UP')
-        elif cordinations[player_index][1] == n and cordinations[player_index][0] == n:
+        elif cordinations[player_index][1] == n and\
+                cordinations[player_index][0] == n:
             limitations.append('DOWN')
     else:
         print("You can move in all four directions")
@@ -57,8 +65,9 @@ def initialize_grid(n: int) -> List:
         if len(limitations) == 1:
             print(f"You can't move '{limitations[0]}'")
         else:
-            print(
-                f"You can't move either '{limitations[0]}' and '{limitations[1]}'")
+            print("You can't move either '{}' and '{}'".format(
+                limitations[0], limitations[1]))
     valuable_info = [(player_index, dragon_index, dungeon_index),
-                     limitations, cordinations, rows_list, available_places_indexes]
-    return(valuable_info)
+                     limitations, cordinations, rows_list,
+                     available_places_indexes]
+    return (valuable_info)
