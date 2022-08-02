@@ -7,12 +7,12 @@ print("_______Welcome to Dungeons and Dragons game_______")
 print("____First you should determine the grid size____")
 grid_size = int(input("____Enter the grid size(n>1): "))
 print("____Here is what your battle field looks like: ")
-initial_updated_informationormation = make_grid(n=grid_size)
+initial_information = make_grid(n=grid_size)
 
-player_index = initial_updated_informationormation[0][0]
-dragon_index = initial_updated_informationormation[0][1]
-dungeon_index = initial_updated_informationormation[0][2]
-limited_places = initial_updated_informationormation[1]
+player_index = initial_information[0][0]
+dragon_index = initial_information[0][1]
+dungeon_index = initial_information[0][2]
+limited_places = initial_information[1]
 
 print(" \nEnter 'QUIT' to exit!")
 user_command = input("Which direction do you want to move? ")
