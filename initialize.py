@@ -3,7 +3,7 @@ from typing import Tuple, List
 
 
 def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
-    """ This function receives the input size of grid as "n",
+    """ This function receives the input size of the grid as "n",
     chooses a random place for your starting position and
     draw your battle filed on the terminal and returns a list
     of useful information about the game situation. """
@@ -75,11 +75,11 @@ def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
             if len(limitations) == 1:
                 print("\nYou are currently located in room: {}".format(
                     cordinations[player_index]))
-                print(f"\nYou can't move '{limitations[0]}'\n")
+                print(f"You can't move '{limitations[0]}'\n")
             else:
                 print("\nYou are currently located in room: {}".format(
                     cordinations[player_index]))
-                print("\nYou can't move either '{}' and '{}'\n".format(
+                print("You can't move either '{}' and '{}'\n".format(
                     limitations[0], limitations[1]))
     check_limitation()
 
