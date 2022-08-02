@@ -72,12 +72,12 @@ def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
                     cordinations[player_index][0] == n:
                 limitations.append('DOWN')
         else:
-            print("\nYou can move in all four directions")
+            print("You can move in all four directions")
         if limitations:
             if len(limitations) == 1:
-                print(f"You can't move '{limitations[0]}'\n")
+                print(f"You can't move '{limitations[0]}'")
             else:
-                print("You can't move either '{}' and '{}'\n".format(
+                print("You can't move either '{}' and '{}'".format(
                     limitations[0], limitations[1]))
     check_limitation()
 
