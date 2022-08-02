@@ -34,6 +34,8 @@ def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
             others_row_new = "{}".format(
                 rows_str[(i)*(2*n+1):(i+1)*(2*n+1)])
             print(others_row_new)
+        print("\nYou are currently located in room: {}".format(
+            cordinations[player_index]))
     draw_grid()
 
     def check_limitation():
@@ -73,12 +75,8 @@ def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
             print("\nYou can move in all four directions")
         if limitations:
             if len(limitations) == 1:
-                print("\nYou are currently located in room: {}".format(
-                    cordinations[player_index]))
                 print(f"You can't move '{limitations[0]}'\n")
             else:
-                print("\nYou are currently located in room: {}".format(
-                    cordinations[player_index]))
                 print("You can't move either '{}' and '{}'\n".format(
                     limitations[0], limitations[1]))
     check_limitation()
