@@ -2,7 +2,7 @@ from random import sample
 from typing import Tuple, List
 
 
-def make_grid(n: int) -> List[Tuple[int, int, int] | List[str]]:
+def make_grid(n: int) -> List:
     """ This function receives the input size of the grid as "n",
     chooses a random place for your starting position and
     draw your battle filed on the terminal and returns a list
